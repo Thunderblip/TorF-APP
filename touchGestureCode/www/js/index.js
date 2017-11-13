@@ -2,6 +2,7 @@
 
 $(document).on("pagecreate","#pageone",function(){
     
+    shake.startWatch(onShake, 40);
   
   	$('#tapholdtext').on("taphold",function(){
     	$(this).hide();
@@ -23,11 +24,14 @@ $(document).on("pagecreate","#pageone",function(){
     	 
         //some stuff
         var val = randomNumber();
+        var onShake = function(){
+            navigator.notification.beep(1);
+        }
         
         $("#myText").text(val);
         
         if (val) {
-    navigator.notification.beep(1);
+    navigator.notification.beep(3);
             //vibrate for 2000 milliseconds
 navigator.vibrate(2000);
        
