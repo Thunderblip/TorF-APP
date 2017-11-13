@@ -26,6 +26,13 @@ $(document).on("pagecreate","#pageone",function(){
         
         $("#myText").text(val);
         
+   if (val) {
+    navigator.notification.beep(1);
+       
+} else { 
+    navigator.notification.beep(2);
+}
+        
   	});  
 
 
@@ -35,12 +42,4 @@ function randomNumber() {
     return !!Math.round(Math.random());
 } 
 
-if (val = false) {
-    
-    navigator.notification.beep(1);
-}
 
-if (val = true) {
-    
-    navigator.notification.beep(2);
-}
