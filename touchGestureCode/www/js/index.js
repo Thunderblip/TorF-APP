@@ -2,7 +2,6 @@
 
 $(document).on("pagecreate","#pageone",function(){
     
-    shake.startWatch(onShake, 40);
   
   	$('#tapholdtext').on("taphold",function(){
     	$(this).hide();
@@ -10,6 +9,7 @@ $(document).on("pagecreate","#pageone",function(){
 
 	$('#taptext').on("tap",function(){
     	$(this).css('color', 'red');
+         shake.startWatch(onShake, 40);
  	}); 
 
 	$('#swipetext').on("swipeleft",function(){
