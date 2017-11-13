@@ -26,11 +26,18 @@ $(document).on("pagecreate","#pageone",function(){
         
         $("#myText").text(val);
         
-   if (val) {
+        if (val) {
     navigator.notification.beep(1);
+            //vibrate for 2000 milliseconds
+navigator.vibrate(2000);
        
-} else { 
+} 
+        else { 
     navigator.notification.beep(2);
+            //vibrate for 200 milliseconds
+//wait for 300 milliseconds
+//wait for 500 milliseconds
+navigator.vibrate([200, 300, 500]);
 }
         
   	});  
